@@ -1,0 +1,12 @@
+############ priority queue ##############
+Begin
+   Define a structure of type student.
+   Initialize variables in student structure.
+   Define another structure of type comparemarks
+   Overload the variables of student structure in comapremarks
+   structure.
+   Use priority queue with structure.
+   Insert some elements in priority queue using student structure.
+   While the queue is not empty do
+      Print the elements.
+End.
