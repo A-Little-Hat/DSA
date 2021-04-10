@@ -1,0 +1,8 @@
+Radix_sort (list, n)
+shift = 1
+for loop = 1 to keysize do
+   for entry = 1 to n do
+   bucketnumber = (list[entry].key / shift) mod 10
+   append (bucket[bucketnumber], list[entry])
+list = combinebuckets()
+shift = shift * 10
