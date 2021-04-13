@@ -80,8 +80,9 @@ int main() {
   int size = sizeof(arr) / sizeof(arr[0]);
 
   mergeSort(arr, 0, size - 1);
-
-  cout << "Sorted array: \n";
+  cout<<"before sort the array is: "<<endl;
+  printArray(arr, size);
+  cout <<endl<< "Sorted array: \n";
   printArray(arr, size);
   cout<<"count = "<<count;
   return 0;
