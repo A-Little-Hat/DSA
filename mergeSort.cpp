@@ -1,7 +1,6 @@
-// Merge sort in C++
-
 #include <iostream>
 using namespace std;
+int count=0;
 
 // Merge two subarrays L and M into arr
 void merge(int arr[], int p, int q, int r) {
@@ -34,6 +33,7 @@ void merge(int arr[], int p, int q, int r) {
       j++;
     }
     k++;
+    count++;
   }
 
   // When we run out of elements in either L or M,
@@ -42,12 +42,14 @@ void merge(int arr[], int p, int q, int r) {
     arr[k] = L[i];
     i++;
     k++;
+    count++;
   }
 
   while (j < n2) {
     arr[k] = M[j];
     j++;
     k++;
+    count++;
   }
 }
 
@@ -81,5 +83,6 @@ int main() {
 
   cout << "Sorted array: \n";
   printArray(arr, size);
+  cout<<"count = "<<count;
   return 0;
 }
