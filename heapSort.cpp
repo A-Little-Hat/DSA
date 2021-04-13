@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-
+int count =0;
 // To heapify a subtree rooted with node i which is
 // an index in arr[]. n is size of heap
 void heapify(int arr[], int n, int i)
@@ -10,7 +10,7 @@ void heapify(int arr[], int n, int i)
 	int largest = i; // Initialize largest as root
 	int l = 2 * i + 1; // left = 2*i + 1
 	int r = 2 * i + 2; // right = 2*i + 2
-
+        count++;
 	// If left child is larger than root
 	if (l < n && arr[l] > arr[largest])
 		largest = l;
@@ -58,9 +58,11 @@ int main()
 {
 	int arr[] = { 12, 11, 13, 5, 6, 7 };
 	int n = sizeof(arr) / sizeof(arr[0]);
-
+    cout<<"before sort the array is:"<<endl;
+    printArray(arr,n);
 	heapSort(arr, n);
 
 	cout << "Sorted array is \n";
 	printArray(arr, n);
+	cout<<"count = "<<count;
 }
