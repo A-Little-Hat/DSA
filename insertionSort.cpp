@@ -1,7 +1,9 @@
 // Insertion sort in C++
 
+
 #include <iostream>
 using namespace std;
+int count = 0;
 
 // Function to print an array
 void printArray(int array[], int size) {
@@ -22,6 +24,7 @@ void insertionSort(int array[], int size) {
     while (key < array[j] && j >= 0) {
       array[j + 1] = array[j];
       --j;
+      count++;
     }
     array[j + 1] = key;
   }
@@ -31,7 +34,10 @@ void insertionSort(int array[], int size) {
 int main() {
   int data[] = {9, 5, 1, 4, 3};
   int size = sizeof(data) / sizeof(data[0]);
+  cout<<"before sort the array is:\n";
+  printArray(data, size);
   insertionSort(data, size);
   cout << "Sorted array in ascending order:\n";
   printArray(data, size);
+  cout<<"\nnumber of comparison = "<<count;
 }
